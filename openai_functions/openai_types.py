@@ -99,6 +99,9 @@ class Message:
                     "content": message,
                 }
         else:
+            if "content" not in message:
+                message["content"] = None
+
             self.message = message
 
     @property
